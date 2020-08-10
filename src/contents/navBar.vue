@@ -1,7 +1,6 @@
 <template>
     <div class="top-nav">
-  
-      <router-link classs="top-link" to="/">Home</router-link>
+        <router-link classs="top-link" to="/">Home</router-link>
       <router-link classs="top-link" to="/about">About</router-link>
       <router-link classs="top-link" to="/">Services</router-link>
       <router-link classs="top-link" to="/about">Contacts</router-link>
@@ -15,9 +14,10 @@ export default {
 <style lang="scss" scoped>
 .top-nav{
     padding: 1% 10%;
-    background: #000;
+    background: rgb(136, 7, 7);
     .top-link{
-        margin: 0% 55px;
+        margin: 0% 550px;
+        color: rgb(203, 222, 240);
     }
 }
 </style>
