@@ -15,6 +15,8 @@ export default {
 .top-nav{
     padding: 1% 10%;
     background: rgb(136, 7, 7);
+    float: left;
+    width: 100%;
     .top-link{
         margin: 0% 1px;
         padding: 10px;

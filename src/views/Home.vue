@@ -1,7 +1,12 @@
 <template>
-  <div class="home">
-
-  </div>
+  <div class="home container-fluid">
+    <div class="row">
+      
+    </div>
+      <div class="row">
+        <h2 class="bg-danger">hello</h2>
+      </div>
+    </div>
 </template>
 
 <script>
