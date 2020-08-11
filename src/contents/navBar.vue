@@ -1,9 +1,9 @@
 <template>
     <div class="top-nav">
-        <router-link classs="top-link" to="/">Home</router-link>
-      <router-link classs="top-link" to="/about">About</router-link>
-      <router-link classs="top-link" to="/">Services dd</router-link>
-      <router-link classs="top-link" to="/about">Contacts</router-link>
+        <router-link class="top-link" to="/">HOME</router-link>
+        <router-link class="top-link" to="/about">ABOUT</router-link>
+        <router-link class="top-link" to="/">SERVICES</router-link>
+        <router-link class="top-link" to="/about">CONTACT</router-link>
     </div>
 </template>
 <script>
@@ -16,8 +16,12 @@ export default {
     padding: 1% 10%;
     background: rgb(136, 7, 7);
     .top-link{
-        margin: 0% 550px;
+        margin: 0% 1px;
+        padding: 10px;
         color: rgb(203, 222, 240);
+        text-decoration: none;
     }
+    
 }
+
 </style>
