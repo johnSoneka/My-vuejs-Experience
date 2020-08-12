@@ -1,16 +1,26 @@
 <template>
   <div class="home container-fluid">
-    <div class="row">
-      
+    <div class="row bg-success">
+      <div class="col">
+        To help reduce and eventual eradicate poverty through innovative solutions
+      </div>
+    
     </div>
-      <div class="row">
-        <h2 class="bg-danger">hello</h2>
+
+
+    <div class="row">
+      <div class="col">
+        <img src="" alt="">
+        
       </div>
     </div>
+  </div>
 </template>
 
 <script>
 // @ is an alias to /src
+
+  
 
 
 export default {
@@ -20,3 +30,7 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+
+
+</style>
