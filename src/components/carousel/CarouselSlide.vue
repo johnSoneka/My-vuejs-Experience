@@ -1,9 +1,11 @@
 <template>
-    <div v-show="visible">
+    <transition name="slide">
+        <div v-show="visible">
         index : {{index}}
         visible ? {{visible}}
-      <slot></slot>
-    </div>
+            <slot></slot>
+        </div>
+    </transition>
 </template>
 <script>
 export default {

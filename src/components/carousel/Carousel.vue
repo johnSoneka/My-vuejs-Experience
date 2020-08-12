@@ -1,8 +1,11 @@
 <template>
     <div class="carousel">
         <slot></slot>
-        <button class="prev" @click="prev">Prev</button>
-        <button class="next" @click="next">Next</button>
+        <div class="button-nav">
+            <button class="prev" @click="prev">Prev</button>
+            <button class="next" @click="next">Next</button>
+        </div>
+        
     </div>
 </template>
 <script>
@@ -41,3 +44,18 @@ export default {
     }
 }
 </script>
+<style lang="scss" scoped>
+.carousel{
+    position: relative;
+    .prev{
+        position: absolute;
+        top:50%;
+        left: 10px;
+    }
+    .next{
+        position: absolute;
+        top:50%;
+        right: 10px;
+    }
+}
+</style>
