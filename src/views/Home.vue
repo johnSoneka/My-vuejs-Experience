@@ -12,9 +12,32 @@
       <carousel-slide>
         john le gents
         <img src="https://picsum.photos/id/3/800/300" alt="john">
+        
 
       </carousel-slide>
     </carousel>
+<!--<carousel>
+    <carousel-slide>
+         <img class="mx-3" src="https://picsum.photos/id/7/250/300" alt="john">
+        <img class="mx-3" src="https://picsum.photos/id/1/250/300" alt="john">
+        <img class="mx-3" src="https://picsum.photos/id/90/250/300" alt="john">
+        <img class="mx-3" src="https://picsum.photos/id/3/250/300" alt="john">
+      </carousel-slide>
+      <carousel-slide>
+ 
+        <img class="mx-3" src="https://picsum.photos/id/2/250/300" alt="john">
+        <img class="mx-3" src="https://picsum.photos/id/3/250/300" alt="john">
+        <img class="mx-3" src="https://picsum.photos/id/5/250/300" alt="john">
+        <img class="mx-3" src="https://picsum.photos/id/3/250/300" alt="john">
+      </carousel-slide>
+      <carousel-slide>
+        <img class="mx-3" src="https://picsum.photos/id/3/250/300" alt="john">
+        <img class="mx-3" src="https://picsum.photos/id/3/250/300" alt="john">
+        <img class="mx-3" src="https://picsum.photos/id/7/250/300" alt="john">
+        <img class="mx-3" src="https://picsum.photos/id/12/250/300" alt="john">
+
+      </carousel-slide>
+    </carousel> -->
     
   </div>
 </template>
