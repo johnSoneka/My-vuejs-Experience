@@ -1,19 +1,9 @@
 <template>
   <div class="home container-fluid">
     <carousel>
-      <carousel-slide>
-        Salut le gents
-        <img src="https://picsum.photos/id/1/800/300" alt="john">
-      </carousel-slide>
-      <carousel-slide>
-        Bien le gents
-        <img src="https://picsum.photos/id/2/800/300" alt="john">
-      </carousel-slide>
-      <carousel-slide>
-        john le gents
-        <img src="https://picsum.photos/id/3/800/300" alt="john">
-        
-
+      <carousel-slide v-for="n in slides" :key="n">
+        <div class="text"> Slide {{n}}</div> 
+        <img :src="'https://picsum.photos/id/' +(n+3)+ '/800/300'"  width="100%" alt="john">
       </carousel-slide>
     </carousel>
 <!--<carousel>
@@ -51,6 +41,11 @@ import carouselSlide from '../components/carousel/CarouselSlide'
 
 export default {
   name: 'Home',
+  data (){
+    return {
+      slides: 10
+    }
+  },
   components: {
     carousel,
     carouselSlide
@@ -58,6 +53,18 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
+.home{
+  margin: 0;
+  padding: 0;
+}
+.text{
+  right: 0;
+  left: 0;
+  text-align: center;
+  top: 90%;
+  font-size: 34px;
+  position: absolute;
+  color: red;
+}
 
 </style>
