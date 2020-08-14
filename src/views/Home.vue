@@ -3,7 +3,7 @@
     <carousel>
       <carousel-slide v-for="n in slides" :key="n">
         <div class="text"> Slide {{n}}</div> 
-        <img :src="'https://picsum.photos/id/' +(n+3)+ '/800/300'"  width="100%" alt="john">
+        <img :src="'https://picsum.photos/id/' +(n+4)+ '/800/300'"  width="100%" alt="john">
       </carousel-slide>
     </carousel>
 <!--<carousel>
