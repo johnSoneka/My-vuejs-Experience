@@ -1,16 +1,15 @@
 <template>
     <div class="carousel">
         <slot></slot>
-        <div class="button-nav">
-            <button class="prev" @click="prev">Prev</button>
-            <button class="next" @click="next">Next</button>
-        </div>
-        <div class="pagination ">
-            <button class="btn" v-for="n in slideCount" :key="n" 
+        
+        <div class="pagination pt-3">
+            <button class="btn prev pages" @click="prev"> * </button>
+            <button class="btn pages" v-for="n in slideCount" :key="n" 
             @click="goto(n-1)"
             :class="{active : n-1 == index}">
             {{n}}
             </button>
+            <button class="btn next pages" @click="next">>></button>
         </div>.
         
     </div>
@@ -66,7 +65,7 @@ export default {
                 if(vm.index > vm.$parent.slides -1 ){
                     vm.index = 0
                 }
-            },6000)
+            },15000)
         }
     }
 }
@@ -74,23 +73,24 @@ export default {
 <style lang="scss" scoped>
 .carousel{
     position: relative;
-    .prev{
-        position: absolute;
-        top:50%;
-        left: 10px;
-    }
-    .next{
-        position: absolute;
-        top:50%;
-        right: 10px;
-    }
+    
     .pagination{
         position: absolute;
         text-align: center;
         
         right: 0;
+        .prev{
         
-        button{
+        bottom: 0;
+        left: 0;
+        position: inline-block;
+        }
+        .next{
+        position: inline-block;
+        bottom: 0;
+        right: 0;
+        }
+        .pages{
             position: inline-block;
             background: black;
             color: #fff;
