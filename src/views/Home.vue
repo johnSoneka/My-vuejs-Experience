@@ -1,6 +1,8 @@
 <template>
   <div class="home container-fluid">
-    <!-- main Carourel-->
+  <!--
+    <div>
+    -- main Carourel--
     <carousel class="mb-5">
       <carousel-slide v-for="n in slides" :key="n" >
         <div class="text"> Slide {{n}}</div> 
@@ -8,7 +10,7 @@
       </carousel-slide>
     </carousel>
     <h1>HELO</h1>
-    <!-- Images Carousel with pagination -->
+    -- Images Carousel with pagination --
     <carousel-pagination class="carou" @keydown.esc="imageShow = !imageShow">
       <pagination-slide v-for="n in slides" :key="n" >
         <div class="slide-catalogue"
@@ -35,7 +37,7 @@
         </div>        
       </pagination-slide>
     </carousel-pagination>
-    <!-- Single Image Display -->
+    !-- Single Image Display --
     <div class="big-image" tabindex="1" v-if="imageShow" @keydown.esc="close()">
       <p class="text-danger float-right" @click="imageShow =!imageShow">close</p>
       <simple-carousel class="main-image float-left m-4">
@@ -54,108 +56,118 @@
     </div>
     <h1>I am here</h1>
     <div v-for="n in 5" :key="n" :temp="3">index {{n}}</div>
-  <!--
-  <carousel>
-    <carousel-slide>
-      <img class="mx-3" src="https://picsum.photos/id/7/250/300" alt="john">
-      <img class="mx-3" src="https://picsum.photos/id/1/250/300" alt="john">
-      <img class="mx-3" src="https://picsum.photos/id/90/250/300" alt="john">
-      <img class="mx-3" src="https://picsum.photos/id/3/250/300" alt="john">
-     </carousel-slide>
-     <carousel-slide>
-      <img class="mx-3" src="https://picsum.photos/id/2/250/300" alt="john">
-      <img class="mx-3" src="https://picsum.photos/id/3/250/300" alt="john">
-      <img class="mx-3" src="https://picsum.photos/id/5/250/300" alt="john">
-      <img class="mx-3" src="https://picsum.photos/id/3/250/300" alt="john">
-    </carousel-slide>
-    <carousel-slide>
-      <img class="mx-3" src="https://picsum.photos/id/3/250/300" alt="john">
-      <img class="mx-3" src="https://picsum.photos/id/3/250/300" alt="john">
-      <img class="mx-3" src="https://picsum.photos/id/7/250/300" alt="john">
-      <img class="mx-3" src="https://picsum.photos/id/12/250/300" alt="john">
-    </carousel-slide>
-  </carousel> 
+    !--
+    <carousel>
+      <carousel-slide>
+        <img class="mx-3" src="https://picsum.photos/id/7/250/300" alt="john">
+        <img class="mx-3" src="https://picsum.photos/id/1/250/300" alt="john">
+        <img class="mx-3" src="https://picsum.photos/id/90/250/300" alt="john">
+        <img class="mx-3" src="https://picsum.photos/id/3/250/300" alt="john">
+      </carousel-slide>
+      <carousel-slide>
+        <img class="mx-3" src="https://picsum.photos/id/2/250/300" alt="john">
+        <img class="mx-3" src="https://picsum.photos/id/3/250/300" alt="john">
+        <img class="mx-3" src="https://picsum.photos/id/5/250/300" alt="john">
+        <img class="mx-3" src="https://picsum.photos/id/3/250/300" alt="john">
+      </carousel-slide>
+      <carousel-slide>
+        <img class="mx-3" src="https://picsum.photos/id/3/250/300" alt="john">
+        <img class="mx-3" src="https://picsum.photos/id/3/250/300" alt="john">
+        <img class="mx-3" src="https://picsum.photos/id/7/250/300" alt="john">
+        <img class="mx-3" src="https://picsum.photos/id/12/250/300" alt="john">
+      </carousel-slide>
+    </carousel> 
+    --
+  </div>
   -->
+
+  <todo></todo>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import simpleCarousel from '../components/carousel/simpleImage/simpleCarousel';
-import simpleSlide from '../components/carousel/simpleImage/simpleSlide';
-import carousel from '../components/carousel/Carousel';
-import carouselSlide from '../components/carousel/CarouselSlide'
-import carouselPagination from '../components/carousel/pagination/carouselPagination';
-import paginationSlide from '../components/carousel/pagination/paginationSlide';
-
+/*import simpleCarousel from '../components/carousel/simpleImage/simpleCarousel';
+  import simpleSlide from '../components/carousel/simpleImage/simpleSlide';
+  import carousel from '../components/carousel/Carousel';
+  import carouselSlide from '../components/carousel/CarouselSlide'
+  import carouselPagination from '../components/carousel/pagination/carouselPagination';
+  import paginationSlide from '../components/carousel/pagination/paginationSlide';
+*/
+import todo from '../components/todo';
 
 export default {
   name: 'Home',
   data (){
     return {
-      slides: 4,
+     /* slides: 4,
       n: 2,
-      imageShow: false,
+      imageShow: false,*/
     }
   },
   components: {
-    carousel,
+  /* carousel,
     carouselSlide,
     simpleCarousel,
     simpleSlide,
     carouselPagination,
-    paginationSlide
+    paginationSlide 
+  */
+ todo
   },
   methods:{
+  /*
     getImg(n){
       var images = require.context('../assets/img/')
       return images('./' +n+ ".jpg")
     },
     addSlide(){
       this.slides= slides
-    }
+    } 
+  */
   }
 }
 </script>
 <style lang="scss" scoped>
-.home{
+/*.home{
   margin: 0;
   padding: 0;
-}
-.text{
-  right: 0;
-  left: 0;
-  text-align: center;
-  top: 90%;
-  font-size: 34px;
-  position: absolute;
-  color: red;
-}
-.slide-catalogue{
-  position: relative;
-  float: left;
-  padding: 12px 22px;
-  margin: 0 1.5%;
-  background: #fffcfc;
-  width: 17%;
-  border-radius: 10px;
-  border: 2px groove rgb(131, 131, 131);
-}
-.big-image{
-  top: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  padding: 10% 15%;
-  position: relative;
-  position: fixed;;
-  .main-image{
-  width: 600px;
   }
-}
-.carou{
-  float: left;
-}
-.active{
-  border: 2px solid red;
-}
+  .text{
+    right: 0;
+    left: 0;
+    text-align: center;
+    top: 90%;
+    font-size: 34px;
+    position: absolute;
+    color: red;
+  }
+  .slide-catalogue{
+    position: relative;
+    float: left;
+    padding: 12px 22px;
+    margin: 0 1.5%;
+    background: #fffcfc;
+    width: 17%;
+    border-radius: 10px;
+    border: 2px groove rgb(131, 131, 131);
+  }
+  .big-image{
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10% 15%;
+    position: relative;
+    position: fixed;;
+    .main-image{
+    width: 600px;
+    }
+  }
+  .carou{
+    float: left;
+  }
+  .active{
+    border: 2px solid red;
+  }
+*/
 </style>
