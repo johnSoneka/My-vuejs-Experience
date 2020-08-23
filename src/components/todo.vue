@@ -16,12 +16,12 @@
 </template>
 <script>
 import { mapGetters } from "vuex";
-import {imageUrl} from "@/firebase"
-import {nameRefs} from "@/firebase"
+
+import {nameRefs, imageUrl} from "@/firebase"
 
 
 export default{
-  name : 'todo',
+  name : 'todod',
   data (){
     return{
       name:'',
@@ -31,7 +31,7 @@ export default{
   computed: mapGetters(['allTodos', 'singleImage']),
   methods:{
     addName(){
-  
+      nameRefs.push({name: this.name, edit : false})
       imageUrl.push({imgUrl : this.imgUrl})
     }
   }
