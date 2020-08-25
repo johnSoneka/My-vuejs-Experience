@@ -21,7 +21,7 @@ import {nameRefs, imageUrl} from "@/firebase"
 
 
 export default{
-  name : 'todod',
+  name : 'todo',
   data (){
     return{
       name:'',
