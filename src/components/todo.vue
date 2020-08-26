@@ -25,7 +25,8 @@ export default{
   data (){
     return{
       name:'john',
-      imgUrl: ''
+      imgUrl: '',
+      //
     }
   },
   computed: mapGetters(['allTodos', 'singleImage']),
