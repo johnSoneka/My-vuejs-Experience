@@ -24,7 +24,7 @@ export default{
   name : 'todo',
   data (){
     return{
-      name:'',
+      name:'john',
       imgUrl: ''
     }
   },
